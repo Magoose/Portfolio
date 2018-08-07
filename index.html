@@ -1,5 +1,23 @@
 ---
 layout: default
 ---
+<div class="introduction">
+      <div class="aliSalem">
+      <p><img src="img/portray.jpg" width="200px" height="200px" align="left" /></img>Hello my Name is Ali Salem</p>
+    </div>
+  </div>
 
-<h1>Home</h1>
+<hr>
+<div class="projectTitle">
+  <h1>PROJECTS</h1>
+</div>
+
+<div class="projects">
+{% for projects in site.posts reversed %}
+<div class="container">
+  <div class = "img">
+  <img style="width:100px; height:100px;" src="{{site.baseurl}}/img/portfolio/{{projects.image}}" alt="The {{projects.title}} Project">
+  </div>
+</div>
+{% endfor %}
+</div>
